@@ -8,7 +8,8 @@ RUN mkdir -p /var/metaflow/src
 
 RUN pip install -r /var/metaflow/src/requirements.txt
 
-ENV METAFLOW_USER-metaflow-user
+ENV METAFLOW_USER=metaflow-user
+ENV METAFLOW_HOME=/var/metaflow/src
 
 RUN conda config --env --add channels conda-forge
 
