@@ -6,6 +6,8 @@ RUN apt-get update && \
 
 RUN mkdir -p /var/metaflow/src
 
+ADD src /var/metaflow/src
+
 RUN pip install -r /var/metaflow/src/requirements.txt
 
 ENV METAFLOW_USER=metaflow-user
